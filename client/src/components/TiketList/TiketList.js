@@ -1,16 +1,18 @@
 import Tiket from "../tiket/Tiket";
+import { nanoid } from "nanoid";
 const TiketList = ({ tiket }) => {
   return (
     <ul>
       {tiket.map((item) => (
-        <li key={item.last_trade_time}>
+        <li key={nanoid()}>
           <Tiket
-            id={item.last_trade_time}
+            id={nanoid()}
             ticker={item.ticker}
             price={item.price}
             change={item.change}
             change_percent={item.change_percent}
             dividend={item.dividend}
+            yielt={item.yielt}
           />
         </li>
       ))}
