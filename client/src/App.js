@@ -2,7 +2,6 @@ import "./App.css";
 import TiketList from "./components/TiketList/TiketList";
 import response from "./response.json";
 import { io } from "socket.io-client";
-import { connect } from "react-redux";
 // const socket = io("ws://localhost:4000");
 
 // socket.on("connect", () => {
