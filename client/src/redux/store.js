@@ -1,9 +1,11 @@
-import { createStore, combineReducers } from "redux";
+import { configureStore } from '@reduxjs/toolkit';
 
-import tikersReducer from "./reduser";
+import tikersReducer from './reduser';
 
-const rootReducer = combineReducers({
-  tikers: tikersReducer,
+// const store = createStore(rootReducer);
+const store = configureStore({
+  reducer: {
+    tikers: tikersReducer,
+  },
 });
-const store = createStore(rootReducer);
 export default store;

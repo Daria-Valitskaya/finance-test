@@ -1,12 +1,12 @@
-import Tiket from "../tiket/Tiket";
-import { nanoid } from "nanoid";
-import { connect } from "react-redux";
-import Button from "../Button/Button";
-import * as actions from "../../redux/actions";
+import Tiket from '../tiket/Tiket';
+import { nanoid } from 'nanoid';
+import { connect } from 'react-redux';
+import Button from '../Button/Button';
+import * as actions from '../../redux/actions';
 const TiketList = ({ value, onAdd, onRemove }) => {
   return (
     <>
-      <Button type={"button"}>{value}</Button>
+      <Button type={'button'}>{value}</Button>
       <button type="button" onClick={onAdd}>
         +1
       </button>
@@ -34,7 +34,7 @@ const TiketList = ({ value, onAdd, onRemove }) => {
 
 const mapStateToProps = (state) => {
   return {
-    value: state.tiker.tikerValue,
+    value: state.tiker,
   };
 };
 const mapDispatchToProps = (dispatch) => {

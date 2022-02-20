@@ -1,13 +1,9 @@
-import { combineReducers } from "redux";
-import * as types from "./type";
-const tiker = (state = [], { type, payload }) => {
-  switch (type) {
-    case types.SET_TIKER:
-      return [...state, payload];
-    default:
-      return state;
-  }
-};
+import { combineReducers } from 'redux';
+import { createReducer } from '@reduxjs/toolkit';
+import * as actions from '../redux/actions';
+const tiker = createReducer([], {
+  [actions.setTiker]: (state, { payload }) => [...state, payload],
+});
 
 export default combineReducers({
   tiker,
